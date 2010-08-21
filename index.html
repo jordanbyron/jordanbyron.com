@@ -3,9 +3,32 @@
   <head>
     <title>jordan byron</title>
     <link href="stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-ui-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $('a.about').click(function(){
+          $("#about").toggle('blind', {}, 1000);
+        });
+      });
+    </script>
   </head>
   <body>
     <div id='content'>
+      <div id='about' style='display:none;'>
+        <h2>about</h2>
+        <img src="jordan.jpg" />
+        <p>
+          Throughout his career, Jordan has learned several development languages and techniques, which gives him a unique insight into everyday problems. Jordan strives to always find simple solutions to complex problems. In 2009, he applied this philosophy to the Connecticut Mission of Mercy dental clinic. His software efficiently processed over 1,700 patients with minimal end-user instruction and zero technical issues.
+        </p>
+        <p>
+          In mid-2009 Jordan began working with Madriska Media Group to fill the void between backend developers and front-end designers. Having experience in both Rails and general web development, Jordan is able to create rich user experiences that work in harmony with complex internal systems.
+        </p>
+        <p>
+          His partnership with Madriska has allowed him to work with some of the most talented developers in the Ruby community including Madriska's owner Brad Ediger and lead developer Gregory Brown.
+        </p>
+      </div>
       <div id='header'>
         <div id='title'>
           <h1>jordan byron</h1>
@@ -17,7 +40,7 @@
           |
           <a href='http://twitter.com/jordan_byron' id='twitter'>twitter</a>
           |
-          <a href='#about'>about</a>
+          <a href='#about' class='about'>about</a>
         </div>
       </div>
       <h3>TODO:</h3>
