@@ -1,5 +1,7 @@
 - content_for :head do
   %title Jordan Byron
+  
+  / Thanks for viewing the source. You can get the real stuff over on github: https://github.com/jordanbyron/jordanbyron.com
 
 %h1 Hi! I'm Jordan Byron. This is my website.
 
@@ -20,10 +22,11 @@
 
 %h2 Where can you learn more?
 
-%a{:href => "http://github.com/jordanbyron"} github
-%br
-%a{:href => "http://twitter.com/jordan_byron"} twitter
-%br
-:javascript
-  document.write('<a href="mailto:jordan.byron@' + 'gmail.com">email</a>');
+%p
+  %a{:href => "http://github.com/jordanbyron"} github
+  %br
+  %a{:href => "http://twitter.com/jordan_byron"} twitter
+  %br
+  :javascript
+    document.write('<a href="mailto:jordan.byron@' + 'gmail.com">email</a>');
   
