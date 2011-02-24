@@ -1,18 +1,17 @@
 @import "compass"
 @import "blueprint"
 
+@import "partials/fonts"
+
 $font-color:         #2a2a2a
-$link-color:         #0388a6
+$link-color:         $font-color
 $link-hover-color:   #009ce0
 $link-focus-color:   $link-color
 $link-active-color:  $link-color
 $link-visited-color: $link-color
 
-$blueprint-font-family:  'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif
-$blueprint-font-size:    13px
-$blueprint-grid-columns: 12
-$blueprint-grid-width:   60px
-$blueprint-grid-margin:  20px
+$blueprint-font-family:  'JustTheWayYouAreRegular'
+$blueprint-font-size:    16px
 
 +global-reset
 
@@ -20,8 +19,21 @@ $blueprint-grid-margin:  20px
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+  text-decoration: none
 
-#frame
+#wrap
   padding: 50px
   text-align: center
-  +container
+
+// These selection declarations have to be separate
+// No text-shadow: twitter.com/miketaylr/status/12228805301
+// https://github.com/paulirish/html5-boilerplate/blob/master/css/style.css
+
+=selection
+  background: #009ce0
+  color: #fff
+  text-shadow: none
+::-moz-selection
+  +selection
+::selection
+  +selection
