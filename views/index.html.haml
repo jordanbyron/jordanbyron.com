@@ -1,9 +1,16 @@
 - content_for :head do
   %title Jordan Byron
   
+  :javascript
+    $(function() { JB.Slideshow.start(); });
+  
   / Thanks for viewing the source. You can get the real stuff over on github: https://github.com/jordanbyron/jordanbyron.com
 
 %h1 Hi! I'm Jordan Byron. This is my website.
+
+#photos
+  - 6.times do |n|
+    %img{:src=>"/images/photos/#{n + 1}.jpg", :class => ('top' if n == 0)}
 
 %h2 So ... who am I?
 

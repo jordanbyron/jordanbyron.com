@@ -1,0 +1,19 @@
+#photos
+  +box-shadow(#333, 0, 0, 5px)
+  height: 300px
+  width: 500px
+  margin: 3em auto
+  position: relative
+  
+  img
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    +transition(opacity, 1s, ease-in-out)
+    
+    //-webkit-transition: opacity 1s ease-in-out
+    &.top
+      opacity: 1
+  
+    
