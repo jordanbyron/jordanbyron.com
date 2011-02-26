@@ -1,3 +1,9 @@
+.csstransitions #photos img.photo
+  opacity: 0
+  +transition(opacity, 1s, ease-in-out)
+  &.top
+    opacity: 1
+
 #photos
   +box-shadow(#333, 0, 0, 5px)
   height: 300px
@@ -9,10 +15,7 @@
     position: absolute
     top: 0
     left: 0
-    opacity: 0
-    +transition(opacity, 1s, ease-in-out)
-    &.top
-      opacity: 1
+      
   &:hover .controls .control
     opacity: 0.75
   

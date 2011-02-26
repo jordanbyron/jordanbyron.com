@@ -18,6 +18,10 @@ JB.Slideshow.init = function(){
     }
   });
   
+  if(!Modernizr.csstransitions){
+    $('#photos img.photo:not(.top)').css('display', 'none');
+  }
+  
   JB.Slideshow.start();
 }
 
@@ -77,6 +81,12 @@ JB.Slideshow.previous = function(resetTimer){
 JB.Slideshow.show = function(picture){
   JB.Slideshow.current().toggleClass('top');
   picture.toggleClass('top');
+  
+  if(!Modernizr.csstransitions){
+    // Use JS fading ...
+    picture.fadeIn(1000);
+    current.fadeOut(1000);
+  }
 }
 
 JB.Slideshow.current = function(){
