@@ -7,6 +7,17 @@ JB.Slideshow.init = function(){
   $('#next').click(function(){ JB.Slideshow.next(true); });
   $('#previous').click(function(){ JB.Slideshow.previous(true); });
   
+  // Bind arrow keys
+  
+  $(document).keydown(function(e){
+    if (e.keyCode == 37) { 
+      JB.Slideshow.previous(true);
+    }
+    else if(e.keyCode == 39){
+      JB.Slideshow.next(true);
+    }
+  });
+  
   JB.Slideshow.start();
 }
 
