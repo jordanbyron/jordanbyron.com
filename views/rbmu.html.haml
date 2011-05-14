@@ -1,16 +1,22 @@
 - content_for :head do
   %title RbMU | Jordan Byron
   
+  :javascript
+    $(function(){ JB.Navigation.init(); });
+  
 %h1 
   History of&nbsp;
   %span.red> Rb
   MU
   
+#nav
+  %a{:href => "#articles", :'data-section' => 'articles'} Articles
+  %a{:href => "#videos", :'data-section' => 'videos'} Videos
 %hr
-  
-#articles
+
+#articles.section{:style => "display: none;"}
   .article
-    %a.title{:href=>"http://blog.rubybestpractices.com/posts/gregory/025-ruby-mendicant-university.html"}
+    %a.title{:href=>"http://confreaks.net/videos/472-rubyconf2010-ruby-mendicant-university-a-new-way-to-learn"}
       IDEA: Ruby Mendicant University
     .description
       The article that started it all.
@@ -47,3 +53,35 @@
       Ruby Mendicant University
     .description
       The official public site of RbMU
+      
+#videos.section{:style => "display: none;"}
+  .video
+    %a.title{:href=>"http://blog.rubybestpractices.com/posts/gregory/025-ruby-mendicant-university.html"}
+      Ruby Mendicant University: A New Way to Learn
+    .description
+      First official talk about RbMU @ RubyConf 2010
+  .video
+    %a.title{:href=>"http://www.youtube.com/watch?v=_cnaed9Twz8"}
+      About Ruby Mendicant University
+    .description
+      Gregory Brown describes the two goals of RbMU
+  .video
+    %a.title{:href=>"http://vimeo.com/19576831"}
+      Ruby Mendicant University talk at PghRB
+    .description
+      Alumnus Andrew Cox talks about the RbMU experience
+  .video
+    %a.title{:href=>"http://www.youtube.com/watch?v=MKso28TPpSY"}
+      Ruby Mendicant University from a student's perspective
+    .description
+      Alumnus Brandon Hays recalls his RbMU core course experience
+  .video
+    %a.title{:href=>"http://vimeo.com/20855102"}
+      Philly.rb & Carl Leiby: Ruby Mendicant University
+    .description
+      Alumnus Carl Leiby talks about RbMU and it's new site PuzzleNode
+  .video
+    %a.title{:href=>"http://www.youtube.com/watch?v=AfTkPkHJNLI"}
+      RMU lightning talk at MWRC 2011
+    .description
+      Brandon Hays brings some RbMU knowledge to Mountain West Ruby Conference

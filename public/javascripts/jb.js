@@ -1,5 +1,6 @@
 JB = {
-  Slideshow: {}
+  Slideshow: {},
+  Navigation: {}
 };
 
 JB.Slideshow.init = function(){
