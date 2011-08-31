@@ -23,6 +23,9 @@ a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
   text-decoration: none
 
+p.main
+  line-height: 2
+
 #wrap
   padding: 50px
   text-align: center
@@ -33,13 +36,13 @@ hr
   color: #ccc
   height: 1px
   border: 0
-  
+
 a.back
   display: block
   color: #555
   &:hover
     color: $link-hover-color
-  
+
 // These selection declarations have to be separate
 // No text-shadow: twitter.com/miketaylr/status/12228805301
 // https://github.com/paulirish/html5-boilerplate/blob/master/css/style.css
@@ -52,12 +55,12 @@ a.back
   +selection
 ::selection
   +selection
-  
-//  Always force a scrollbar in non-IE 
-// Remove iOS text size adjust without disabling user zoom: 
+
+//  Always force a scrollbar in non-IE
+// Remove iOS text size adjust without disabling user zoom:
 //www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 
-html 
+html
   overflow-y: scroll
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
