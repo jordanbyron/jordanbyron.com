@@ -1,20 +1,23 @@
 .csstransitions #photos img.photo
+  display: none
   opacity: 0
   +transition(opacity, 1s, ease-in-out)
   &.top
     opacity: 1
 
 #photos
-  +single-box-shadow(#333, 0, 0, 5px)
+  border: 10px solid rgba(0,0,0,0.25)
   height: 300px
   width: 500px
   margin: 3em auto
   position: relative
+  +border-radius(5px)
 
   img.photo
     position: absolute
     top: 0
     left: 0
+    +border-radius(2px)
 
   &:hover .controls .control
     opacity: 0.75

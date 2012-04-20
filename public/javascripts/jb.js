@@ -7,22 +7,24 @@ JB.Slideshow.init = function(){
   $('#play-pause').click(function(){ JB.Slideshow.toggle(); });
   $('#next').click(function(){ JB.Slideshow.next(true); });
   $('#previous').click(function(){ JB.Slideshow.previous(true); });
-  
+
   // Bind arrow keys
-  
+
   $(document).keydown(function(e){
-    if (e.keyCode == 37) { 
+    if (e.keyCode == 37) {
       JB.Slideshow.previous(true);
     }
     else if(e.keyCode == 39){
       JB.Slideshow.next(true);
     }
   });
-  
+
   if(!Modernizr.csstransitions){
     $('#photos img.photo:not(.top)').css('display', 'none');
   }
-  
+  else
+    $('#photos img.photo').css('display', 'block');
+
   JB.Slideshow.start();
 }
 
@@ -59,30 +61,30 @@ JB.Slideshow.reset = function(){
 
 JB.Slideshow.next = function(resetTimer){
   if(resetTimer) JB.Slideshow.reset();
-  
+
   current = JB.Slideshow.current();
   next    = current.next('img.photo');
-  
+
   if(next.length == 0) next = $('#photos img.photo:first');
-  
+
   JB.Slideshow.show(next);
 };
 
 JB.Slideshow.previous = function(resetTimer){
   if(resetTimer) JB.Slideshow.reset();
-  
+
   current  = JB.Slideshow.current();
   previous = current.prev('img.photo');
-  
+
   if(previous.length == 0) previous = $('#photos img.photo:last');
-  
+
   JB.Slideshow.show(previous);
 };
 
 JB.Slideshow.show = function(picture){
   JB.Slideshow.current().toggleClass('top');
   picture.toggleClass('top');
-  
+
   if(!Modernizr.csstransitions){
     // Use JS fading ...
     picture.fadeIn(1000);
