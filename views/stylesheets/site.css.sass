@@ -20,7 +20,7 @@ $blueprint-font-size:    16px
 +blueprint-typography
 
 body
-  background: url(/images/arches.png)
+  background: url(/images/clean_textile.png)
   +single-text-shadow(#eee, -1px, -1px, 0)
 
 a
@@ -35,18 +35,28 @@ p
   padding: 50px
   text-align: center
 
-hr
-  width: 700px
-  background: #ccc
-  color: #ccc
-  height: 1px
-  border: 0
+p.heart
+  margin: 0 auto
+  height: 64px
+  width: 64px
+  position: relative
+  img
+    position: absolute
+    top: 0
+    left: 0
+    // Animation
+    -webkit-transition: all 0.35s ease-in
+    -webkit-transition-delay: 0
+    -moz-transition: all 0.35s ease-in 0
+    -ms-transition: all 0.35s ease-in 0
+    -o-transition: all 0.35s ease-in 0
+    transition: all 0.35s ease-in 0
 
-a.back
-  display: block
-  color: #555
-  &:hover
-    color: $link-hover-color
+    &.full
+      opacity: 0
+  &:hover img.full
+    opacity: 1
+
 
 // These selection declarations have to be separate
 // No text-shadow: twitter.com/miketaylr/status/12228805301
