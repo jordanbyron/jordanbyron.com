@@ -1,45 +1,33 @@
 - content_for :head do
   %title Jordan Byron
 
-  :javascript
-    $(function() { JB.Slideshow.init(); });
-
   / Thanks for viewing the source. You can get the real stuff over on github: https://github.com/jordanbyron/jordanbyron.com
 
-%h1 
-  %span Hi! I'm 
-  Jordan Byron
-
-#photos
-  - 8.times do |n|
-    %img.photo{:src=>"/images/photos/#{n + 1}.jpg", :class => ('top' if n == 0)}
-  .controls
-    %img#previous.control{:src=>"/images/controls/previous.png"}
-    #play-pause.control
-    %img#next.control{:src=>"/images/controls/next.png"}
+%h1
+  Hi! I'm Jordan Byron
 
 %p.main
 
   I'm a developer at #{link_to "Madriska", "http://madriska.com"}
   and #{link_to "Building Hero", "http://buildinghero.com"}
-  
+
   %br
-  
-  This year I am 
-  = link_to "getting married", 
+
+  This year I am
+  = link_to "getting married",
     "http://kellyandjordanswedding.com"
   to the love of my life
   = link_to "Kelly O'Brien", "http://twitter.com/kellyaob"
-  
+
   %br
-  
+
   I play the trumpet and enjoy hiking, yoga, and
   = link_to "helping those in need",
     "https://github.com/mission-of-mercy/mission-of-mercy#readme"
 
   %br
 
-  Check out my projects on 
-  #{link_to "github", "http://github.com/jordanbyron"}, 
-  my thoughts on #{link_to "twitter", "http://twitter.com/jordan_byron"}, 
+  Check out my projects on
+  #{link_to "github", "http://github.com/jordanbyron"},
+  my thoughts on #{link_to "twitter", "http://twitter.com/jordan_byron"},
   and my writing on #{link_to "tumblr", "http://blog.jordanbyron.com"}

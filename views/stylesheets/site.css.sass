@@ -2,7 +2,6 @@
 @import "blueprint"
 
 @import "partials/fonts"
-@import "partials/photos"
 
 $font-color:         #2a2a2a
 $link-color:         #0066CC
@@ -19,8 +18,10 @@ $blueprint-font-size:    16px
 +blueprint-typography
 
 body
-  background: url(/images/grey.png)
-  +single-text-shadow(#eee, -1px, -1px, 0)
+  background: url(/images/photos/jordan.jpg)
+  background-size: cover
+  background-attachment: fixed
+  background-position: center bottom
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
@@ -31,12 +32,20 @@ p
   line-height: 2
   font-size: 1.25em
 
-h1 span
-  color: #555
+h1
+  +single-text-shadow(#fff, 1px, 1px, 0)
+
+p.main
+  background: rgba(0,0,0,0.75)
+  padding: 1em
+  color: #ddd
+  margin-top: 2em
+  +border-radius(5px)
 
 #wrap
-  padding: 50px
+  margin: 50px auto
   text-align: center
+  width: 850px
 
 // These selection declarations have to be separate
 // No text-shadow: twitter.com/miketaylr/status/12228805301
