@@ -6,10 +6,12 @@
 
   / Thanks for viewing the source. You can get the real stuff over on github: https://github.com/jordanbyron/jordanbyron.com
 
-%h1 Hi! I'm Jordan Byron
+%h1 
+  %span Hi! I'm 
+  Jordan Byron
 
 #photos
-  - 7.times do |n|
+  - 8.times do |n|
     %img.photo{:src=>"/images/photos/#{n + 1}.jpg", :class => ('top' if n == 0)}
   .controls
     %img#previous.control{:src=>"/images/controls/previous.png"}
@@ -18,27 +20,26 @@
 
 %p.main
 
-  I'm a developer at 
-  %a{:href => "http://madriska.com/"} Madriska 
-  and 
-  %a{:href => "http://buildinghero.com"} Building Hero
-  
-  %br
-  
-  Check out my projects on
-  %a{:href => "http://github.com/jordanbyron"} github
-  and my thoughts on
-  %a{:href => "http://twitter.com/jordan_byron"} twitter
+  I'm a developer at #{link_to "Madriska", "http://madriska.com"}
+  and #{link_to "Building Hero", "http://buildinghero.com"}
   
   %br
   
   This year I am 
-  %a{:href => "http://kellyandjordanswedding.com"} getting married
-  to the love of my life 
-  %a{:href => "http://twitter.com/kellyaob"} Kelly O'Brien
+  = link_to "getting married", 
+    "http://kellyandjordanswedding.com"
+  to the love of my life
+  = link_to "Kelly O'Brien", "http://twitter.com/kellyaob"
   
   %br
   
   I play the trumpet and enjoy hiking, yoga, and
-  %a{:href => "https://github.com/mission-of-mercy/mission-of-mercy#readme"}
-    helping those in need
+  = link_to "helping those in need",
+    "https://github.com/mission-of-mercy/mission-of-mercy#readme"
+
+  %br
+
+  Check out my projects on 
+  #{link_to "github", "http://github.com/jordanbyron"}, 
+  my thoughts on #{link_to "twitter", "http://twitter.com/jordan_byron"}, 
+  and my writing on #{link_to "tumblr", "http://blog.jordanbyron.com"}
