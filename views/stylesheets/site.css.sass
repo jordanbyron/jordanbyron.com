@@ -1,8 +1,6 @@
 @import "compass"
 @import "blueprint"
 
-@import "partials/fonts"
-
 $font-color:         #2a2a2a
 $link-color:         #0066CC
 $link-hover-color:   #6699CC
@@ -10,43 +8,20 @@ $link-focus-color:   $link-color
 $link-active-color:  $link-color
 $link-visited-color: $link-color
 
-$blueprint-font-family:  'Junction'
+$blueprint-font-family:  'Open Sans', sans-serif
 $blueprint-font-size:    16px
 
 +global-reset
 
 +blueprint-typography
 
-body
-  background: url(/images/photos/jordan.jpg)
-  background-size: cover
-  background-attachment: fixed
-  background-position: center bottom
+@import "partials/landing"
+@import "partials/now"
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
   text-decoration: none
   +transition(all, 0.15s, ease-in-out)
-
-p
-  line-height: 2
-  font-size: 1.25em
-
-h1
-  +single-text-shadow(rgba(255,255,255,0.75), 0px, 1px, 1px)
-  font-weight: bold
-
-p.main
-  background: rgba(0,0,0,0.75)
-  padding: 1em
-  color: #ddd
-  margin-top: 2em
-  +border-radius(5px)
-
-#wrap
-  margin: 50px auto
-  text-align: center
-  width: 850px
 
 // These selection declarations have to be separate
 // No text-shadow: twitter.com/miketaylr/status/12228805301

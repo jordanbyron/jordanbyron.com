@@ -2,28 +2,18 @@
   %title Jordan Byron
 
   / Thanks for viewing the source. You can get the real stuff over on github: https://github.com/jordanbyron/jordanbyron.com
+- content_for(:body_class) { 'landing' }
 
-%h1
-  Hi! I'm Jordan Byron
+#wrap
+  %h1
+    Hi! I'm Jordan Byron
 
-%p.main
+  %p
 
-  I'm a developer at #{link_to "Madriska Media Group", "http://madriska.com"}
-
-  %br
-
-  I help build and maintain the monthly journal
-  = link_to "Practicing Ruby", "https://practicingruby.com"
-
-  %br
-
-  I play the trumpet and enjoy hiking, yoga, and
-  = link_to "helping those in need",
-    "https://github.com/mission-of-mercy/mission-of-mercy#readme"
-
-  %br
-
-  Check out my projects on
-  #{link_to "github", "http://github.com/jordanbyron"},
-  my thoughts on #{link_to "twitter", "http://twitter.com/jordan_byron"},
-  and my writing on #{link_to "tumblr", "http://blog.jordanbyron.com"}
+    See what I am up to by visiting my
+    #{link_to "/now", "/now"} page or
+    %br
+    check out my projects on
+    #{link_to "github", "http://github.com/jordanbyron"},
+    my thoughts on #{link_to "twitter", "http://twitter.com/jordan_byron"},
+    and my writing on #{link_to "tumblr", "http://blog.jordanbyron.com"}

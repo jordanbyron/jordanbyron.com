@@ -1,0 +1,16 @@
+- content_for :head do
+  %title What I’m doing now | Jordan Byron
+
+- content_for(:body_class) { 'now' }
+
+#content
+  %h1 What I'm doing now
+
+  %p.lead
+    Hey there! I'm #{link_to 'Jordan Byron', '/'} and this is a list of what I
+    am currently working on:
+
+    :markdown
+      #{File.read('public/now.md')}
+  %p
+    If my activities change, I’ll update this page. Last update was in October 2015.
