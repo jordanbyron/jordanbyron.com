@@ -15,7 +15,7 @@ GEM
       sass (~> 3.1)
     crack (0.1.8)
     daemons (1.1.9)
-    eventmachine (1.0.0)
+    eventmachine (1.0.8)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.9)
@@ -78,5 +78,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine (= 1.0.8)
   middleman (~> 1.2.7)
   rdiscount
+
+BUNDLED WITH
+   1.14.3
